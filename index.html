@@ -1024,24 +1024,31 @@
     </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <div class="search-container">
-            <form action="{% url 'base:search' user_id=user_id %}" method="post" class="search-bar">
-                <input type="text" placeholder="Search" name="q">
-                <button type="submit"><i class='bx bx-search-alt-2'></i></button>
-            </form>
+    <div class="myPlans">
+        <div class="myPlans-title">
+            <h1>Plans</h1>
         </div>
-        <div class="tab-content">
-            <div id="box1">
-                <a href="myPlans/" style="text-align: center; color: inherit;">
-                    <h1>View my plans</h1>
-                </a>
+
+        <div class="myPlans-container">
+            <div class="myPlans-plans">
+                <p>
+                <ul>
+                    <li><a href="{{ plan.id }}/"></a></li>
+                    <br>
+ 
+
+                </ul>
+
+                <p>No plans created</p>
+
+                </p>
             </div>
-            <div id="box2">
-                <h1 style="text-align: center">Today's Workout</h1>
-            </div>
-            <div id="box3">
-                <h1 style="text-align: center">Tomorrow's Workout</h1>
+
+            <div class="myPlans-items">
+                <a href="createPlan/"><button>Create new plan</button></a>
+                <a href="deletePlan/"><button>Delete a plan</button></a>
+                <a href="createWorkout/"><button>Create workout</button></a>
+                <a href="deleteWorkout/"><button>Delete workout</button></a>
             </div>
         </div>
     </div>
